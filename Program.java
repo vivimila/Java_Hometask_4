@@ -5,20 +5,20 @@
 //   Фамилии, имена, отчества, возрас и пол в отдельных списках.
 // 4.Отсортировать по возрасту используя дополнительный список индексов.
 
-import java.io.FileWriter;
+import java.io.FileReader;
 import java.io.IOException;
 
 public class Program
 {
     public static void main(String[] args) throws IOException
     {
-        String str = "Вывод строки с использованием классов FileWriter и FileReader";
-        FileWriter fw=new FileWriter("output.txt");      // add a file to FileWriter
-        for (int i = 0; i < str.length(); i++)
-            fw.write(str.charAt(i));
- 
+        String str = " ";
+        FileReader reader = new FileReader("db.sql");
+        while (reader. ready ()) {
+            str += (char) reader. read();
+        }
         System.out.println(str);
-        fw.close();
+        
     }
 }
 
