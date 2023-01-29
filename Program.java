@@ -12,13 +12,20 @@ public class Program
 {
     public static void main(String[] args) throws IOException
     {
-        String str = " ";
+        String text = " ";
         FileReader reader = new FileReader("db.sql");
         while (reader. ready ()) {
-            str += (char) reader. read();
+            text += (char) reader. read();
         }
-        System.out.println(str);
+       // System.out.println(str);
         
+        String [] str = text.split("\r\n");
+        for (int i = 0; i < str.length; i++){
+            String [] sb = str[i].split(" ");
+            System.out.println(sb[0] + " " + sb[1].charAt(0) + "." + sb[2].charAt(0) + "." + " " + sb[3] + " " + sb[4]);
+        }
+        
+
     }
 }
 
