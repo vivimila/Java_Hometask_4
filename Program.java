@@ -7,11 +7,21 @@
 
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.LinkedList;
 
 public class Program
 {
     public static void main(String[] args) throws IOException
     {
+        ArrayList<String> family = new ArrayList<>();
+        ArrayList<String> name = new ArrayList<>();
+        ArrayList<String> soname = new ArrayList<>();
+        ArrayList<Integer> age = new ArrayList<>();
+        ArrayList<Boolean> gender = new ArrayList<>();
+        LinkedList<Integer> index = new LinkedList<>();
+
+
         String text = " ";
         FileReader reader = new FileReader("db.sql");
         while (reader. ready ()) {
@@ -20,7 +30,7 @@ public class Program
        // System.out.println(str);
         
         String [] str = text.split("\r\n");
-        for (int i = 0; i < str.length; i++){
+        for (int i = 1; i < str.length; i++){
             String [] sb = str[i].split(" ");
             System.out.println(sb[0] + " " + sb[1].charAt(0) + "." + sb[2].charAt(0) + "." + " " + sb[3] + " " + sb[4]);
         }
