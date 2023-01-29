@@ -27,12 +27,22 @@ public class Program
         while (reader. ready ()) {
             text += (char) reader. read();
         }
-       // System.out.println(str);
         
         String [] str = text.split("\r\n");
         for (int i = 1; i < str.length; i++){
             String [] sb = str[i].split(" ");
-            System.out.println(sb[0] + " " + sb[1].charAt(0) + "." + sb[2].charAt(0) + "." + " " + sb[3] + " " + sb[4]);
+
+            family.add(sb[0]);
+            name.add(sb[1]);
+            soname.add(sb[2]);
+            age.add(Integer.valueOf(sb[3]));
+            gender.add(sb[4] == "M" ? true : false);
+            index.add(i);
+
+             System.out.println(family); 
+
+
+            // System.out.println(sb[0] + " " + sb[1].charAt(0) + "." + sb[2].charAt(0) + "." + " " + sb[3] + " " + sb[4]);
         }
         
 
